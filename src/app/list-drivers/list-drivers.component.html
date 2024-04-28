@@ -1,0 +1,25 @@
+<h1 class="ms-4"><b>Available Drivers</b></h1>
+<div class="my-2 ms-3">
+    <button class="btn btn-primary" routerLink="/addDriver">Add Drivers</button>
+</div>
+<div class="my-2">
+    <ul *ngFor ="let driver of drivers let i = index">
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-8">
+                <div class="card-body">
+                  <p class="card-text"><b class="text-primary">Driver Name:</b> {{driver.Name}}</p>
+                  <p class="card-text"><b class="text-primary">Phone Number:</b> {{driver.phoneNumber["$numberDecimal"]}}</p>
+                  <p class="card-text"><b class="text-primary">Address:</b> {{driver.address}}</p>
+                  <p class="card-text"><b class="text-primary">zipcode:</b> {{driver.zipcode}}</p>
+                  <p class="card-text"><b class="text-primary">city:</b> {{driver.city}}</p>
+                  <p class="card-text"><b class="text-primary">Email:</b> {{driver.email}}</p>
+                  <p class="card-text"><b class="text-primary">Car Model:</b> {{driver.carModel}}</p>
+                  <button class="btn btn-danger mx-3" (click)="onDelete(driver._id)">DELETE</button>
+                  <button class="btn btn-secondary" [routerLink]="['/editDriver', driver._id]">UPDATE</button>
+                </div>  
+              </div>
+            </div>
+          </div>
+    </ul>
+  </div>

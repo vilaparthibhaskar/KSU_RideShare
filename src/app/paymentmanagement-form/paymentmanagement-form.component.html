@@ -1,0 +1,29 @@
+<div class="m-3">
+    <button class="btn btn-primary" routerLink="/listPaymentManagements">List Payments</button>
+</div>
+<div class="mx-5">
+    <h2><b>{{mode}} Payment</b></h2>
+    <form class="ms-4 mt-3" (ngSubmit)="onSubmit()" [formGroup]="paymentmanagementForm">
+        <div class="my-3">
+          <label class="text-primary me-3 fs-5 fw-medium" for="Payee">Payee Name:</label>
+          <input class="border border-2 rounded" placeholder="Payee" id="Payee" formControlName="Payee" name="Payee" >
+        </div>
+        <div class="my-3">
+            <label class="text-primary me-3 fs-5 fw-medium" for="reciever">Reciever Name:</label>
+            <input class="border border-2 rounded" placeholder="reciever" id="reciever" formControlName="reciever" name="reciever" >
+        </div>
+        <div class="my-3">
+          <label class="text-primary me-3 fs-5 fw-medium" for="amount">Amount:</label>
+          <input class="border border-2 rounded" placeholder="amount" id="amount" formControlName="amount" name="amount" >
+        </div>
+        <div class="my-3">
+          <label class="text-primary me-3 fs-5 fw-medium" for="paymenttype">Payment Type:</label>
+          <input class="border border-2 rounded" placeholder="paymenttype" id="paymenttype" formControlName="paymenttype" name="paymenttype" >
+        </div>
+        <p>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </p>
+    </form>
+</div>
+
+

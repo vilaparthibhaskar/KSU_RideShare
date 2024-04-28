@@ -1,0 +1,27 @@
+<div class="m-3">
+    <button class="btn btn-primary" routerLink="/listSchedulerides">List Schedulerides</button>
+</div>
+<div class="mx-5">
+    <h2><b>{{mode}} Scheduleride</b></h2>
+    <form class="ms-4 mt-3" (ngSubmit)="onSubmit()" [formGroup]="schedulerideForm">
+        <div class="my-3">
+          <label class="text-primary me-3 fs-5 fw-medium" for="source">source:</label>
+          <input class="border border-2 rounded" placeholder="source" id="source" formControlName="source" name="source" >
+        </div>
+        <div class="my-3">
+          <label class="text-primary me-3 fs-5 fw-medium" for="destination">Destination:</label>
+          <input class="border border-2 rounded" placeholder="destination" id="destination" formControlName="destination" name="destination" >
+        </div>
+        <div class="my-3">
+          <label class="text-primary me-3 fs-5 fw-medium" for="phoneNumber">phoneNumber:</label>
+          <input class="border border-2 rounded" placeholder="phoneNumber" id="phoneNumber" formControlName="phoneNumber" name="phoneNumber" >
+        </div>
+        <div class="my-3">
+          <label class="text-primary me-3 fs-5 fw-medium" for="pickupTime">pickupTime:</label>
+          <input class="border border-2 rounded" placeholder="pickupTime" id="pickupTime" formControlName="pickupTime" name="pickupTime" >
+        </div>
+        <p>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </p>
+    </form>
+</div>

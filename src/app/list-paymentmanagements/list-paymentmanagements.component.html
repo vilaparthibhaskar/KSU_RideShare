@@ -1,0 +1,22 @@
+<h1 class="ms-4"><b>Payments History</b></h1>
+<div class="my-2 ms-3">
+    <button class="btn btn-primary" routerLink="/addPaymentManagement">Add Payments</button>
+</div>
+<div class="my-2">
+    <ul *ngFor ="let payment of Paymentmanagements let i = index">
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-8">
+                <div class="card-body">
+                  <p class="card-text"><b class="text-primary">Payee Name:</b> {{payment.Payee}}</p>
+                  <p class="card-text"><b class="text-primary">Amount:</b> {{payment.amount["$numberDecimal"]}}</p>
+                  <p class="card-text"><b class="text-primary">Receiver Name:</b> {{payment.receiver}}</p>
+                  <p class="card-text"><b class="text-primary">Payment Type:</b> {{payment.paymenttype}}</p>
+                  <button class="btn btn-danger mx-3" (click)="onDelete(payment._id)">DELETE</button>
+                  <button class="btn btn-secondary" [routerLink]="['/editPaymentManagement', payment._id]">UPDATE</button>
+                </div>  
+              </div>
+            </div>
+          </div>
+    </ul>
+  </div>

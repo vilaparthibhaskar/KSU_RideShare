@@ -1,0 +1,22 @@
+<h1 class="ms-4"><b>Available Scheduled rides</b></h1>
+<div class="my-2 ms-3">
+    <button class="btn btn-primary" routerLink="/addScheduleride">Add Schedulerides</button>
+</div>
+<div class="my-2">
+    <ul *ngFor ="let scheduleride of schedulerides let i = index">
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-8">
+                <div class="card-body">
+                  <p class="card-text"><b class="text-primary">Source:</b> {{scheduleride.source}}</p>
+                  <p class="card-text"><b class="text-primary">Destination:</b> {{scheduleride.destination}}</p>
+                  <p class="card-text"><b class="text-primary">Phone Number:</b> {{scheduleride.phoneNumber["$numberDecimal"]}}</p>
+                  <p class="card-text"><b class="text-primary">Pickup Time:</b> {{scheduleride.pickupTime}}</p>
+                  <button class="btn btn-danger mx-3" (click)="onDelete(scheduleride._id)">DELETE</button>
+                  <button class="btn btn-secondary" [routerLink]="['/editScheduleride', scheduleride._id]">UPDATE</button>
+                </div>  
+              </div>
+            </div>
+          </div>
+    </ul>
+  </div>

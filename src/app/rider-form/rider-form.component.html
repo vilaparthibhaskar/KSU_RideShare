@@ -1,0 +1,35 @@
+<div class="m-3">
+    <button class="btn btn-primary" routerLink="/listRiders">List Riders</button>
+</div>
+<div class="mx-5">
+    <h2><b>{{mode}} Rider</b></h2>
+    <form class="ms-4 mt-3" (ngSubmit)="onSubmit()" [formGroup]="riderForm">
+        <div class="my-3">
+          <label class="text-primary me-3 fs-5 fw-medium" for="Name">Name:</label>
+          <input class="border border-2 rounded" placeholder="Name" id="name" formControlName="Name" name="name" >
+        </div>
+        <div class="my-3">
+          <label class="text-primary me-3 fs-5 fw-medium" for="phoneNumber">phoneNumber:</label>
+          <input class="border border-2 rounded" placeholder="phoneNumber" id="phoneNumber" formControlName="phoneNumber" name="phoneNumber" >
+        </div>
+        <div class="my-3">
+          <label class="text-primary me-3 fs-5 fw-medium" for="Email">Email:</label>
+          <input class="border border-2 rounded" placeholder="email" id="email" formControlName="email" name="email" >
+        </div>
+        <div class="my-3">
+          <label class="text-primary me-3 fs-5 fw-medium" for="Address">Address:</label>
+          <input class="border border-2 rounded" placeholder="address" id="address" formControlName="address" name="address" >
+        </div>
+        <div class="my-3">
+          <label class="text-primary me-3 fs-5 fw-medium" for="zipcode">zipcode:</label>
+          <input class="border border-2 rounded" placeholder="zipcode" id="zipcode" formControlName="zipcode" name="zipcode" (input)="onZipcodeChange()" >
+        </div>
+        <div class="my-3">
+          <label class="text-primary me-3 fs-5 fw-medium" for="city">city:</label>
+          <input class="border border-2 rounded" placeholder="city" id="city" formControlName="city" name="city" >
+        </div>
+        <p>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </p>
+    </form>
+</div>
